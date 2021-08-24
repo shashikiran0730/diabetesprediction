@@ -8,9 +8,8 @@ app=Flask(__name__)
 @app.route('/')
 def shashi():
     return render_template('index.html')
-@app.route('/submit',methods=['POST','GET'])
+@app.route('/submit',methods=['POST'])
 def getdetails():
-    if request.method=='GET':
         p=float(request.form['Pregnancies'])
         g=float(request.form['Glu'])
         b=float(request.form['Bp'])
