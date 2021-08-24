@@ -10,7 +10,7 @@ def shashi():
     return render_template('index.html')
 @app.route('/submit',methods=['POST','GET'])
 def getdetails():
-    if request.method=='POST':
+    if request.method=='GET':
         p=float(request.form['Pregnancies'])
         g=float(request.form['Glu'])
         b=float(request.form['Bp'])
